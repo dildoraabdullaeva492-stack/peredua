@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PERODUA — Flagship Digital Showroom</title>
+  <meta name="description"
+    content="Official Perodua digital dealership displaying every Perodua model, live specifications, interactive engine studio, and showroom pricing." />
+  <meta property="og:title" content="PERODUA — Flagship Digital Showroom" />
+  <meta property="og:description"
+    content="Explore all eight Perodua models with live specifications, interactive ignition studio, comparison, and instant booking." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="https://www.bing.com/images/search?view=detailV2&ccid=6DJuZ84b&id=25C6A7E343B8C93D7B6663E0A6ABB1BB968400CD&thid=OIP.6DJuZ84boC-sIBRiXLljcwHaEK&mediaurl=https%3a%2f%2fcdn.renderhub.com%2f3d-logoman%2fperodua-logo%2fperodua-logo-05.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.e8326e67ce1ba02fac2014625cb96373%3frik%3dzQCElruxq6bgYw%26pid%3dImgRaw%26r%3d0&exph=1080&expw=1920&q=perdua+car+icon&mode=overlay&FORM=IQFRBA&ck=B22443E4B73A8324B8DEFD066659C2CD&selectedIndex=0&idpp=serp" />
+  <link rel="apple-touch-icon" href="./favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+
+  <div id="preloader" class="preloader" aria-hidden="false">
+    <div class="preloader-curtain preloader-curtain-left"></div>
+    <div class="preloader-curtain preloader-curtain-right"></div>
+    <div class="preloader-inner">
+      <div class="preloader-emblem-stage" aria-hidden="true">
+        <svg class="perodua-logo-svg" viewBox="0 0 260 150" fill="none">
+          <defs>
+            <linearGradient id="peroduaChrome" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFFFFF" />
+              <stop offset="50%" stop-color="#C8D0DC" />
+              <stop offset="100%" stop-color="#8A94A6" />
+            </linearGradient>
+            <linearGradient id="peroduaCrimson" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#FF3B42" />
+              <stop offset="100%" stop-color="#B8161C" />
+            </linearGradient>
+          </defs>
+          <ellipse class="logo-ring-outer" cx="130" cy="75" rx="108" ry="56" stroke="url(#peroduaChrome)"
+            stroke-width="4.5" />
+          <ellipse class="logo-ring-inner" cx="130" cy="75" rx="96" ry="46" stroke="rgba(243,245,248,0.22)"
+            stroke-width="1.4" />
+          <path class="logo-ribbon-red"
+            d="M56 102 C74 44, 126 30, 178 48 C202 56, 198 84, 162 88 C132 91, 108 79, 122 58 C132 43, 158 42, 174 52"
+            stroke="url(#peroduaCrimson)" stroke-width="7" stroke-linecap="round" />
+          <path class="logo-ribbon-chrome" d="M72 108 C112 98, 156 96, 196 66" stroke="url(#peroduaChrome)"
+            stroke-width="5.5" stroke-linecap="round" />
+          <path class="logo-ribbon-accent" d="M98 112 C136 108, 172 100, 206 78" stroke="#D9232A" stroke-width="2.5"
+            stroke-linecap="round" />
+        </svg>
+        <div class="preloader-glow"></div>
+      </div>
+      <div class="preloader-brand">PERODUA</div>
+      <div class="preloader-progress-track"><span id="preloader-bar" class="preloader-progress-fill"></span></div>
+      <div id="preloader-counter" class="preloader-counter">0%</div>
+      <button id="preloader-skip" class="preloader-skip" type="button">Enter</button>
+    </div>
+  </div>
+
+  <header id="site-header" class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#hero" aria-label="Perodua Showroom Home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 44 28" fill="none">
+            <ellipse cx="22" cy="14" rx="19" ry="11.5" stroke="#F3F5F8" stroke-width="2.2" />
+            <path d="M9 19 C13 8, 22 6, 31 10 C35 12, 33 17, 26 17 C21 17, 18 14, 21 11" stroke="#D9232A"
+              stroke-width="2.4" stroke-linecap="round" />
+            <path d="M14 21 C21 19, 28 18, 35 13" stroke="#F3F5F8" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </span>
+        <span class="brand-text">PERODUA</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#models">Models</a>
+        <a href="#studio">Live Studio</a>
+        <a href="#safety">Safety</a>
+        <a href="#compare">Compare</a>
+        <a href="#showroom">Showroom</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="open-order-btn" class="order-nav-btn" type="button" aria-label="Open booking list">
+          <span>Booking</span>
+          <span id="header-order-count" class="order-count-num">0</span>
+        </button>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" type="button" aria-label="Toggle menu"
+          aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+      <a href="#models">Models</a>
+      <a href="#studio">Live Studio</a>
+      <a href="#safety">Safety</a>
+      <a href="#compare">Compare</a>
+      <a href="#showroom">Showroom</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-ambient" aria-hidden="true"></div>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="hero-kicker">2026 Perodua Gallery</div>
+          <h1 class="hero-title">
+            Drive <em>Perodua.</em><br />Own the road.
+          </h1>
+          <p class="hero-lead">
+            Eight official models. Instant specs, live financing, factory warranty.
+          </p>
+
+          <div class="hero-cta-row">
+            <a class="btn-primary" href="#models">
+              <span>Explore Models</span>
+              <svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </a>
+            <a class="btn-ghost" href="#studio">
+              <span>Start Engine Studio</span>
+            </a>
+          </div>
+
+          <div class="hero-kpi-bar">
+            <div class="kpi-cell">
+              <div class="kpi-val"><span data-count="8">0</span></div>
+              <div class="kpi-lbl">Perodua Models</div>
+            </div>
+            <div class="kpi-cell">
+              <div class="kpi-val"><span data-count="27" data-decimal=".4">0</span> km/L</div>
+              <div class="kpi-lbl">Top Efficiency</div>
+            </div>
+            <div class="kpi-cell">
+              <div class="kpi-val"><span data-count="5">0</span> Yrs</div>
+              <div class="kpi-lbl">Factory Warranty</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-stage">
+          <div class="hero-frame">
+            <img id="hero-stage-img" src="perodua-hero.jpg"
+              alt="Perodua Myvi 1.5 AV Crimson flagship hatchback" referrerpolicy="no-referrer" />
+            <div class="hero-frame-scrim">
+              <div>
+                <div class="hf-title">Perodua Myvi 1.5 AV</div>
+                <div class="hf-specs">102 HP · D-CVT · ASA 3.0</div>
+              </div>
+              <div class="hero-frame-price">
+                <strong id="hero-price-val" class="hf-price-num">RM 59,900</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-marquee" aria-label="Perodua highlights">
+        <div class="marquee-track">
+          <span>ASA 3.0 Safety</span>
+          <span>·</span>
+          <span>DNGA Platform</span>
+          <span>·</span>
+          <span>5-Year Warranty</span>
+          <span>·</span>
+          <span>D-CVT Performance</span>
+          <span>·</span>
+          <span>27.4 km/L EEV</span>
+          <span>·</span>
+          <span>ASA 3.0 Safety</span>
+          <span>·</span>
+          <span>DNGA Platform</span>
+          <span>·</span>
+          <span>5-Year Warranty</span>
+          <span>·</span>
+          <span>D-CVT Performance</span>
+          <span>·</span>
+          <span>27.4 km/L EEV</span>
+          <span>·</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="models" class="models-section">
+      <div class="wrap">
+        <div class="section-head reveal-slow">
+          <div>
+            <div class="section-kicker">2026 Lineup</div>
+            <h2 class="section-title">Perodua Collection</h2>
+          </div>
+
+          <div class="showroom-toolbar">
+            <div class="currency-switch" role="group" aria-label="Currency selector">
+              <button class="curr-btn active" type="button" data-curr="MYR">RM</button>
+              <button class="curr-btn" type="button" data-curr="USD">USD</button>
+            </div>
+            <label class="search-wrap" aria-label="Search models">
+              <svg class="ui-icon search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.3-4.3" />
+              </svg>
+              <input id="search-input" type="search" placeholder="Search model..." autocomplete="off" />
+            </label>
+            <select id="sort-select" aria-label="Sort models">
+              <option value="featured">Flagship</option>
+              <option value="price-asc">Price: Low</option>
+              <option value="price-desc">Price: High</option>
+              <option value="eco">Best km/L</option>
+              <option value="power">Top HP</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="filter-tabs reveal-slow" role="tablist" aria-label="Body style filter">
+          <button class="filter-btn active" type="button" data-cat="All">All (8)</button>
+          <button class="filter-btn" type="button" data-cat="Hatchback">Hatchback</button>
+          <button class="filter-btn" type="button" data-cat="SUV">SUV</button>
+          <button class="filter-btn" type="button" data-cat="Sedan">Sedan</button>
+          <button class="filter-btn" type="button" data-cat="MPV">MPV</button>
+          <button class="filter-btn" type="button" data-cat="Saved">Saved (<span id="saved-tab-count">0</span>)</button>
+        </div>
+
+        <div id="cars-grid" class="cars-grid">
+          <article class="car-card reveal-card" data-car-id="myvi-av" data-name="Myvi 1.5 AV" data-cat="Hatchback"
+            data-price-myr="59900" data-power="102" data-torque="137 Nm" data-eco="21.1" data-engine="1.5L Dual VVT-i"
+            data-trans="D-CVT" data-safety="ASA 3.0 · 6 Airbags" data-boot="277 L" data-clearance="160 mm"
+            data-warranty="5 Yrs" data-rpm-max="6400" data-pitch="112"
+            data-desc="Sporty 5-door flagship with Level 2 Smart Drive Assist and leather cabin.">
+            <div class="card-spotlight" aria-hidden="true"></div>
+            <div class="car-media">
+              <img src="perodua-3.jpg" alt="Perodua Myvi 1.5 AV" referrerpolicy="no-referrer" />
+              <span class="car-idx">01</span>
+              <button class="fav-btn" type="button" data-fav-id="myvi-av" aria-label="Save Myvi 1.5 AV">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 21s-7-4.5-9.2-9A5.4 5.4 0 0 1 12 6.2 5.4 5.4 0 0 1 21.2 12c-2.2 4.5-9.2 9-9.2 9Z" />
+                </svg>
+              </button>
+              <div class="car-underglow" aria-hidden="true"></div>
+            </div>
+
+            <div class="car-body">
+              <div class="car-top-line">
+                <h3 class="car-title">Myvi 1.5 AV</h3>
+                <span class="car-cat-txt">Hatchback</span>
+              </div>
+
+              <div class="car-specs-inline">
+                <span>102 HP</span>
+                <span>·</span>
+                <span>21.1 km/L</span>
+                <span>·</span>
+                <span>D-CVT</span>
+              </div>
+
+              <div class="car-swatch-bar">
+                <div class="swatch-dots" role="group" aria-label="Myvi colors">
+                  <button class="swatch-dot active" type="button" data-color="Electric Blue" style="--swatch:#154BB8"
+                    aria-label="Electric Blue"></button>
+                  <button class="swatch-dot" type="button" data-color="Lava Red" style="--swatch:#C61D23"
+                    aria-label="Lava Red"></button>
+                  <button class="swatch-dot" type="button" data-color="Granite Grey" style="--swatch:#4A4E54"
+                    aria-label="Granite Grey"></button>
+                </div>
+                <span class="swatch-label">Electric Blue</span>
+              </div>
+
+              <div class="car-footer">
+                <div>
+                  <div class="car-price-main" data-price-display>RM 59,900</div>
+                  <div class="car-price-monthly" data-monthly-display>RM 627/mo</div>
+                </div>
+                <div class="car-actions">
+                  <button class="btn-card-sec" type="button" data-spec-id="myvi-av">Specs</button>
+                  <button class="btn-card-pri" type="button" data-reserve-id="myvi-av">Buy</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="car-card reveal-card" data-car-id="ativa-av" data-name="Ativa 1.0T AV" data-cat="SUV"
+            data-price-myr="72600" data-power="98" data-torque="140 Nm" data-eco="18.9" data-engine="1.0L Turbo"
+            data-trans="D-CVT" data-safety="ASA 3.0 · ACC" data-boot="369 L" data-clearance="200 mm"
+            data-warranty="5 Yrs" data-rpm-max="6200" data-pitch="124"
+            data-desc="Turbocharged compact SUV on DNGA platform with sequential LED signals.">
+            <div class="card-spotlight" aria-hidden="true"></div>
+            <div class="car-media">
+              <img src="perodua-4.jpg" alt="Perodua Ativa 1.0T AV" referrerpolicy="no-referrer" />
+              <span class="car-idx">02</span>
+              <button class="fav-btn" type="button" data-fav-id="ativa-av" aria-label="Save Ativa 1.0T AV">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 21s-7-4.5-9.2-9A5.4 5.4 0 0 1 12 6.2 5.4 5.4 0 0 1 21.2 12c-2.2 4.5-9.2 9-9.2 9Z" />
+                </svg>
+              </button>
+              <div class="car-underglow" aria-hidden="true"></div>
+            </div>
+
+            <div class="car-body">
+              <div class="car-top-line">
+                <h3 class="car-title">Ativa 1.0T AV</h3>
+                <span class="car-cat-txt">Turbo SUV</span>
+              </div>
+
+              <div class="car-specs-inline">
+                <span>98 HP</span>
+                <span>·</span>
+                <span>18.9 km/L</span>
+                <span>·</span>
+                <span>200 mm</span>
+              </div>
+
+              <div class="car-swatch-bar">
+                <div class="swatch-dots" role="group" aria-label="Ativa colors">
+                  <button class="swatch-dot active" type="button" data-color="Delima Red" style="--swatch:#AE1C24"
+                    aria-label="Delima Red"></button>
+                  <button class="swatch-dot" type="button" data-color="Cobalt Blue" style="--swatch:#1B3E8C"
+                    aria-label="Cobalt Blue"></button>
+                  <button class="swatch-dot" type="button" data-color="Pearl White" style="--swatch:#ECEEF0"
+                    aria-label="Pearl White"></button>
+                </div>
+                <span class="swatch-label">Delima Red</span>
+              </div>
+
+              <div class="car-footer">
+                <div>
+                  <div class="car-price-main" data-price-display>RM 72,600</div>
+                  <div class="car-price-monthly" data-monthly-display>RM 760/mo</div>
+                </div>
+                <div class="car-actions">
+                  <button class="btn-card-sec" type="button" data-spec-id="ativa-av">Specs</button>
+                  <button class="btn-card-pri" type="button" data-reserve-id="ativa-av">Buy</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="car-card reveal-card" data-car-id="bezza-av" data-name="Bezza 1.3 AV" data-cat="Sedan"
+            data-price-myr="49980" data-power="94" data-torque="121 Nm" data-eco="22.0" data-engine="1.3L Dual VVT-i"
+            data-trans="4-AT" data-safety="ASA 2.0 · VSC" data-boot="508 L" data-clearance="160 mm"
+            data-warranty="5 Yrs" data-rpm-max="6000" data-pitch="102"
+            data-desc="Executive compact sedan with class-leading 508L boot and Eco Idle.">
+            <div class="card-spotlight" aria-hidden="true"></div>
+            <div class="car-media">
+              <img src="perodua-5.jpg" alt="Perodua Bezza 1.3 AV" referrerpolicy="no-referrer" />
+              <span class="car-idx">03</span>
+              <button class="fav-btn" type="button" data-fav-id="bezza-av" aria-label="Save Bezza 1.3 AV">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 21s-7-4.5-9.2-9A5.4 5.4 0 0 1 12 6.2 5.4 5.4 0 0 1 21.2 12c-2.2 4.5-9.2 9-9.2 9Z" />
+                </svg>
+              </button>
+              <div class="car-underglow" aria-hidden="true"></div>
+            </div>
+
+            <div class="car-body">
+              <div class="car-top-line">
+                <h3 class="car-title">Bezza 1.3 AV</h3>
+                <span class="car-cat-txt">Sedan</span>
+              </div>
+
+              <div class="car-specs-inline">
+                <span>94 HP</span>
+                <span>·</span>
+                <span>22.0 km/L</span>
+                <span>·</span>
+                <span>508 L</span>
+              </div>
+
+              <div class="car-swatch-bar">
+                <div class="swatch-dots" role="group" aria-label="Bezza colors">
+                  <button class="swatch-dot active" type="button" data-color="Garnet Red" style="--swatch:#783C2E"
+                    aria-label="Garnet Red"></button>
+                  <button class="swatch-dot" type="button" data-color="Ocean Blue" style="--swatch:#1D5494"
+                    aria-label="Ocean Blue"></button>
+                  <button class="swatch-dot" type="button" data-color="Ivory White" style="--swatch:#E5E7EB"
+                    aria-label="Ivory White"></button>
+                </div>
+                <span class="swatch-label">Garnet Red</span>
+              </div>
+
+              <div class="car-footer">
+                <div>
+                  <div class="car-price-main" data-price-display>RM 49,980</div>
+                  <div class="car-price-monthly" data-monthly-display>RM 523/mo</div>
+                </div>
+                <div class="car-actions">
+                  <button class="btn-card-sec" type="button" data-spec-id="bezza-av">Specs</button>
+                  <button class="btn-card-pri" type="button" data-reserve-id="bezza-av">Buy</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="car-card reveal-card" data-car-id="alza-av" data-name="Alza 1.5 AV" data-cat="MPV"
+            data-price-myr="75500" data-power="105" data-torque="138 Nm" data-eco="22.0" data-engine="1.5L 2NR-VE"
+            data-trans="D-CVT" data-safety="ASA 3.0 · 360 Cam" data-boot="498 L" data-clearance="160 mm"
+            data-warranty="5 Yrs" data-rpm-max="6300" data-pitch="98"
+            data-desc="Modern 7-seater MPV featuring 360-degree view monitor and electronic brake hold.">
+            <div class="card-spotlight" aria-hidden="true"></div>
+            <div class="car-media">
+              <img src="perodua-6.jpg" alt="Perodua Alza 1.5 AV" referrerpolicy="no-referrer" />
+              <span class="car-idx">04</span>
+              <button class="fav-btn" type="button" data-fav-id="alza-av" aria-label="Save Alza 1.5 AV">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 21s-7-4.5-9.2-9A5.4 5.4 0 0 1 12 6.2 5.4 5.4 0 0 1 21.2 12c-2.2 4.5-9.2 9-9.2 9Z" />
+                </svg>
+              </button>
+              <div class="car-underglow" aria-hidden="true"></div>
+            </div>
+
+            <div class="car-body">
+              <div class="car-top-line">
+                <h3 class="car-title">Alza 1.5 AV</h3>
+                <span class="car-cat-txt">7-Seat MPV</span>
+              </div>
+
+              <div class="car-specs-inline">
+                <span>105 HP</span>
+                <span>·</span>
+                <span>22.0 km/L</span>
+                <span>·</span>
+                <span>7 Seats</span>
+              </div>
+
+              <div class="car-swatch-bar">
+                <div class="swatch-dots" role="group" aria-label="Alza colors">
+                  <button class="swatch-dot active" type="button" data-color="Ivory White" style="--swatch:#E8EBEE"
+                    aria-label="Ivory White"></button>
+                  <button class="swatch-dot" type="button" data-color="Vintage Brown" style="--swatch:#69594D"
+                    aria-label="Vintage Brown"></button>
+                  <button class="swatch-dot" type="button" data-color="Black" style="--swatch:#1F2329"
+                    aria-label="Black"></button>
+                </div>
+                <span class="swatch-label">Ivory White</span>
+              </div>
+
+              <div class="car-footer">
+                <div>
+                  <div class="car-price-main" data-price-display>RM 75,500</div>
+                  <div class="car-price-monthly" data-monthly-display>RM 791/mo</div>
+                </div>
+                <div class="car-actions">
+                  <button class="btn-card-sec" type="button" data-spec-id="alza-av">Specs</button>
+                  <button class="btn-card-pri" type="button" data-reserve-id="alza-av">Buy</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="car-card reveal-card" data-car-id="aruz-av" data-name="Aruz 1.5 AV" data-cat="SUV"
+            data-price-myr="77900" data-power="101" data-torque="133 Nm" data-eco="15.6" data-engine="1.5L RWD"
+            data-trans="4-AT" data-safety="ASA 2.0 · 6 Airbags" data-boot="514 L" data-clearance="220 mm"
+            data-warranty="5 Yrs" data-rpm-max="6100" data-pitch="88"
+            data-desc="High-clearance 7-seater RWD adventure SUV with 220mm ground clearance.">
+            <div class="card-spotlight" aria-hidden="true"></div>
+            <div class="car-media">
+              <img src="perodua-5.jpg" alt="Perodua Aruz 1.5 AV" referrerpolicy="no-referrer" />
+              <span class="car-idx">05</span>
+              <button class="fav-btn" type="button" data-fav-id="aruz-av" aria-label="Save Aruz 1.5 AV">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 21s-7-4.5-9.2-9A5.4 5.4 0 0 1 12 6.2 5.4 5.4 0 0 1 21.2 12c-2.2 4.5-9.2 9-9.2 9Z" />
+                </svg>
+              </button>
+              <div class="car-underglow" aria-hidden="true"></div>
+            </div>
+
+            <div class="car-body">
+              <div class="car-top-line">
+                <h3 class="car-title">Aruz 1.5 AV</h3>
+                <span class="car-cat-txt">7-Seat SUV</span>
+              </div>
+
+              <div class="car-specs-inline">
+                <span>101 HP</span>
+                <span>·</span>
+                <span>220 mm</span>
+                <span>·</span>
+                <span>RWD</span>
+              </div>
+
+              <div class="car-swatch-bar">
+                <div class="swatch-dots" role="group" aria-label="Aruz colors">
+                  <button class="swatch-dot active" type="button" data-color="Amazon Green" style="--swatch:#1E4335"
+                    aria-label="Amazon Green"></button>
+                  <button class="swatch-dot" type="button" data-color="Passion Red" style="--swatch:#BA2026"
+                    aria-label="Passion Red"></button>
+                  <button class="swatch-dot" type="button" data-color="Granite Grey" style="--swatch:#474B52"
+                    aria-label="Granite Grey"></button>
+                </div>
+                <span class="swatch-label">Amazon Green</span>
+              </div>
+
+              <div class="car-footer">
+                <div>
+                  <div class="car-price-main" data-price-display>RM 77,900</div>
+                  <div class="car-price-monthly" data-monthly-display>RM 816/mo</div>
+                </div>
+                <div class="car-actions">
+                  <button class="btn-card-sec" type="button" data-spec-id="aruz-av">Specs</button>
+                  <button class="btn-card-pri" type="button" data-reserve-id="aruz-av">Buy</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="car-card reveal-card" data-car-id="axia-av" data-name="Axia 1.0 AV" data-cat="Hatchback"
+            data-price-myr="49500" data-power="67" data-torque="91 Nm" data-eco="27.4" data-engine="1.0L EEV"
+            data-trans="D-CVT" data-safety="ASA 3.0 · BSM" data-boot="265 L" data-clearance="150 mm"
+            data-warranty="5 Yrs" data-rpm-max="6000" data-pitch="132"
+            data-desc="DNGA city hatchback achieving 27.4 km/L with 7-inch TFT meter.">
+            <div class="card-spotlight" aria-hidden="true"></div>
+            <div class="car-media">
+              <img src="perodua-7.jpg" alt="Perodua Axia 1.0 AV" referrerpolicy="no-referrer" />
+              <span class="car-idx">06</span>
+              <button class="fav-btn" type="button" data-fav-id="axia-av" aria-label="Save Axia 1.0 AV">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 21s-7-4.5-9.2-9A5.4 5.4 0 0 1 12 6.2 5.4 5.4 0 0 1 21.2 12c-2.2 4.5-9.2 9-9.2 9Z" />
+                </svg>
+              </button>
+              <div class="car-underglow" aria-hidden="true"></div>
+            </div>
+
+            <div class="car-body">
+              <div class="car-top-line">
+                <h3 class="car-title">Axia 1.0 AV</h3>
+                <span class="car-cat-txt">City Hatch</span>
+              </div>
+
+              <div class="car-specs-inline">
+                <span>67 HP</span>
+                <span>·</span>
+                <span>27.4 km/L</span>
+                <span>·</span>
+                <span>D-CVT</span>
+              </div>
+
+              <div class="car-swatch-bar">
+                <div class="swatch-dots" role="group" aria-label="Axia colors">
+                  <button class="swatch-dot active" type="button" data-color="Coral Sunrise" style="--swatch:#D45536"
+                    aria-label="Coral Sunrise"></button>
+                  <button class="swatch-dot" type="button" data-color="Lava Red" style="--swatch:#BD1E24"
+                    aria-label="Lava Red"></button>
+                  <button class="swatch-dot" type="button" data-color="Ivory White" style="--swatch:#E5E8EC"
+                    aria-label="Ivory White"></button>
+                </div>
+                <span class="swatch-label">Coral Sunrise</span>
+              </div>
+
+              <div class="car-footer">
+                <div>
+                  <div class="car-price-main" data-price-display>RM 49,500</div>
+                  <div class="car-price-monthly" data-monthly-display>RM 518/mo</div>
+                </div>
+                <div class="car-actions">
+                  <button class="btn-card-sec" type="button" data-spec-id="axia-av">Specs</button>
+                  <button class="btn-card-pri" type="button" data-reserve-id="axia-av">Buy</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="car-card reveal-card" data-car-id="myvi-sport" data-name="Myvi S-Edition" data-cat="Hatchback"
+            data-price-myr="62400" data-power="102" data-torque="137 Nm" data-eco="21.1" data-engine="1.5L Sport"
+            data-trans="D-CVT PWR" data-safety="ASA 3.0 · DVR" data-boot="277 L" data-clearance="155 mm"
+            data-warranty="5 Yrs" data-rpm-max="6600" data-pitch="106"
+            data-desc="Factory GearUp aero kit, matte titanium finish, and Power Mode steering toggle.">
+            <div class="card-spotlight" aria-hidden="true"></div>
+            <div class="car-media">
+              <img src="perodua-8.jpg" alt="Perodua Myvi S-Edition" referrerpolicy="no-referrer" />
+              <span class="car-idx">07</span>
+              <button class="fav-btn" type="button" data-fav-id="myvi-sport" aria-label="Save Myvi S-Edition">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 21s-7-4.5-9.2-9A5.4 5.4 0 0 1 12 6.2 5.4 5.4 0 0 1 21.2 12c-2.2 4.5-9.2 9-9.2 9Z" />
+                </svg>
+              </button>
+              <div class="car-underglow" aria-hidden="true"></div>
+            </div>
+
+            <div class="car-body">
+              <div class="car-top-line">
+                <h3 class="car-title">Myvi S-Edition</h3>
+                <span class="car-cat-txt">Sport Aero</span>
+              </div>
+
+              <div class="car-specs-inline">
+                <span>102 HP</span>
+                <span>·</span>
+                <span>137 Nm</span>
+                <span>·</span>
+                <span>PWR</span>
+              </div>
+
+              <div class="car-swatch-bar">
+                <div class="swatch-dots" role="group" aria-label="Myvi S colors">
+                  <button class="swatch-dot active" type="button" data-color="Titanium" style="--swatch:#53575E"
+                    aria-label="Titanium"></button>
+                  <button class="swatch-dot" type="button" data-color="Cranberry" style="--swatch:#8F1D24"
+                    aria-label="Cranberry"></button>
+                  <button class="swatch-dot" type="button" data-color="Obsidian" style="--swatch:#1B1E23"
+                    aria-label="Obsidian"></button>
+                </div>
+                <span class="swatch-label">Titanium</span>
+              </div>
+
+              <div class="car-footer">
+                <div>
+                  <div class="car-price-main" data-price-display>RM 62,400</div>
+                  <div class="car-price-monthly" data-monthly-display>RM 653/mo</div>
+                </div>
+                <div class="car-actions">
+                  <button class="btn-card-sec" type="button" data-spec-id="myvi-sport">Specs</button>
+                  <button class="btn-card-pri" type="button" data-reserve-id="myvi-sport">Buy</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="car-card reveal-card" data-car-id="axia-se" data-name="Axia SE 1.0" data-cat="Hatchback"
+            data-price-myr="44000" data-power="67" data-torque="91 Nm" data-eco="25.3" data-engine="1.0L EEV"
+            data-trans="D-CVT" data-safety="VSC · Hill Hold" data-boot="265 L" data-clearance="150 mm"
+            data-warranty="5 Yrs" data-rpm-max="6000" data-pitch="128"
+            data-desc="Agile city commuter with LED DRL signature, sport seats, and smart entry.">
+            <div class="card-spotlight" aria-hidden="true"></div>
+            <div class="car-media">
+              <img src="perodua-1.jpg" alt="Perodua Axia SE 1.0" referrerpolicy="no-referrer" />
+              <span class="car-idx">08</span>
+              <button class="fav-btn" type="button" data-fav-id="axia-se" aria-label="Save Axia SE 1.0">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 21s-7-4.5-9.2-9A5.4 5.4 0 0 1 12 6.2 5.4 5.4 0 0 1 21.2 12c-2.2 4.5-9.2 9-9.2 9Z" />
+                </svg>
+              </button>
+              <div class="car-underglow" aria-hidden="true"></div>
+            </div>
+
+            <div class="car-body">
+              <div class="car-top-line">
+                <h3 class="car-title">Axia SE 1.0</h3>
+                <span class="car-cat-txt">Urban</span>
+              </div>
+
+              <div class="car-specs-inline">
+                <span>67 HP</span>
+                <span>·</span>
+                <span>25.3 km/L</span>
+                <span>·</span>
+                <span>D-CVT</span>
+              </div>
+
+              <div class="car-swatch-bar">
+                <div class="swatch-dots" role="group" aria-label="Axia SE colors">
+                  <button class="swatch-dot active" type="button" data-color="Ivory White" style="--swatch:#EAECEF"
+                    aria-label="Ivory White"></button>
+                  <button class="swatch-dot" type="button" data-color="Lava Red" style="--swatch:#C61D23"
+                    aria-label="Lava Red"></button>
+                  <button class="swatch-dot" type="button" data-color="Silver" style="--swatch:#BCC1C8"
+                    aria-label="Silver"></button>
+                </div>
+                <span class="swatch-label">Ivory White</span>
+              </div>
+
+              <div class="car-footer">
+                <div>
+                  <div class="car-price-main" data-price-display>RM 44,000</div>
+                  <div class="car-price-monthly" data-monthly-display>RM 461/mo</div>
+                </div>
+                <div class="car-actions">
+                  <button class="btn-card-sec" type="button" data-spec-id="axia-se">Specs</button>
+                  <button class="btn-card-pri" type="button" data-reserve-id="axia-se">Buy</button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div id="cars-empty" class="empty-state" hidden>
+          No matching Perodua model.
+        </div>
+      </div>
+    </section>
+
+    <section id="studio" class="studio-section">
+      <div class="wrap">
+        <div class="studio-header reveal-slow">
+          <div>
+            <div class="section-kicker kicker-light">Interactive Cockpit &amp; Lighting</div>
+            <h2 class="section-title title-light">Live Perodua Ignition Studio</h2>
+          </div>
+
+          <div class="studio-model-tabs" role="tablist" aria-label="Studio vehicle selector">
+            <button class="studio-tab active" type="button" data-studio-car="myvi-av">Myvi AV</button>
+            <button class="studio-tab" type="button" data-studio-car="ativa-av">Ativa Turbo</button>
+            <button class="studio-tab" type="button" data-studio-car="alza-av">Alza AV</button>
+            <button class="studio-tab" type="button" data-studio-car="aruz-av">Aruz SUV</button>
+            <button class="studio-tab" type="button" data-studio-car="myvi-sport">Myvi S</button>
+          </div>
+        </div>
+
+        <div id="studio-stage-shell" class="studio-shell reveal-slow" data-light="obsidian">
+          <div class="studio-visual">
+            <div class="studio-overhead-beam" aria-hidden="true"></div>
+            <div id="studio-headlight-cone" class="studio-headlight-cone" aria-hidden="true"></div>
+            <img id="studio-car-img" src="perodua-1.jpg" alt="Perodua Live Ignition Studio vehicle"
+              referrerpolicy="no-referrer" />
+            <div class="studio-floor-reflection" aria-hidden="true"></div>
+            <div class="studio-stage-caption">
+              <strong id="studio-car-name">Myvi 1.5 AV</strong>
+              <span id="studio-car-spec">1.5L Dual VVT-i · 102 HP</span>
+            </div>
+          </div>
+
+          <div class="studio-cockpit">
+            <div class="tachometer-wrap">
+              <svg class="tacho-svg" viewBox="0 0 240 155" aria-label="Live RPM tachometer">
+                <path d="M 28 135 A 92 92 0 1 1 212 135" fill="none" stroke="rgba(243,245,248,0.14)" stroke-width="10"
+                  stroke-linecap="round" />
+                <path d="M 186 68 A 92 92 0 0 1 212 135" fill="none" stroke="#D9232A" stroke-width="10"
+                  stroke-linecap="round" />
+                <path id="tacho-arc-live" d="M 28 135 A 92 92 0 1 1 212 135" fill="none" stroke="#F3F5F8"
+                  stroke-width="10" stroke-linecap="round" stroke-dasharray="385" stroke-dashoffset="385" />
+                <g id="tacho-needle-group" transform="rotate(-120 120 135)">
+                  <line x1="120" y1="135" x2="120" y2="54" stroke="#D9232A" stroke-width="3.2" stroke-linecap="round" />
+                  <circle cx="120" cy="135" r="7" fill="#F3F5F8" />
+                </g>
+                <text id="tacho-rpm-text" x="120" y="114" text-anchor="middle" fill="#F3F5F8"
+                  font-family="JetBrains Mono, monospace" font-size="22" font-weight="600">0</text>
+                <text x="120" y="130" text-anchor="middle" fill="rgba(243,245,248,0.58)"
+                  font-family="Plus Jakarta Sans, sans-serif" font-size="10">RPM</text>
+              </svg>
+            </div>
+
+            <div class="ignition-controls">
+              <button id="engine-start-btn" class="engine-start-btn" type="button" aria-pressed="false">
+                <span class="es-ring"></span>
+                <span class="es-top">ENGINE</span>
+                <strong id="engine-btn-label" class="es-main">START</strong>
+              </button>
+
+              <button id="engine-rev-btn" class="engine-rev-btn" type="button" disabled>
+                <span>Hold to Rev</span>
+                <small>6,400 RPM</small>
+              </button>
+            </div>
+
+            <div class="studio-switches">
+              <div class="switch-group">
+                <span class="sw-title">Showroom Ambience</span>
+                <div class="light-btns" role="group" aria-label="Lighting ambience">
+                  <button class="light-btn active" type="button" data-ambience="obsidian">Obsidian</button>
+                  <button class="light-btn" type="button" data-ambience="crimson">Track Red</button>
+                  <button class="light-btn" type="button" data-ambience="daylight">Gallery</button>
+                </div>
+              </div>
+
+              <div class="switch-group">
+                <span class="sw-title">LED Headlamps</span>
+                <button id="headlight-toggle-btn" class="headlight-btn" type="button" aria-pressed="false">
+                  Headlights: Off
+                </button>
+              </div>
+            </div>
+
+            <button id="studio-buy-btn" class="btn-primary studio-reserve-cta" type="button">
+              Reserve Selected Model
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="safety" class="safety-section">
+      <div class="wrap">
+        <div class="section-head reveal-slow">
+          <div>
+            <div class="section-kicker">DNGA Architecture</div>
+            <h2 class="section-title">Perodua Smart Safety</h2>
+          </div>
+        </div>
+
+        <div class="safety-grid reveal-slow">
+          <div class="safety-blueprint">
+            <svg viewBox="0 0 600 280" fill="none" class="blueprint-svg" aria-label="Perodua DNGA safety blueprint">
+              <ellipse cx="300" cy="140" rx="220" ry="96" stroke="rgba(17,21,28,0.08)" stroke-dasharray="6 6" />
+              <path
+                d="M115 162 C128 118, 178 92, 245 88 L368 88 C428 92, 468 118, 492 146 L502 172 C502 182, 492 188, 478 188 L128 188 C114 188, 108 178, 115 162 Z"
+                stroke="#11151C" stroke-width="2.4" fill="rgba(17,21,28,0.03)" />
+              <path d="M196 130 L246 98 L358 98 L406 130 Z" stroke="#11151C" stroke-width="1.6"
+                fill="rgba(217,35,42,0.06)" />
+              <circle cx="185" cy="188" r="28" stroke="#11151C" stroke-width="2.4" fill="#F3F5F8" />
+              <circle cx="185" cy="188" r="11" stroke="#D9232A" stroke-width="2" />
+              <circle cx="428" cy="188" r="28" stroke="#11151C" stroke-width="2.4" fill="#F3F5F8" />
+              <circle cx="428" cy="188" r="11" stroke="#D9232A" stroke-width="2" />
+              <path d="M498 152 L572 128 M498 160 L576 160 M498 168 L572 192" stroke="#D9232A" stroke-width="1.8"
+                stroke-dasharray="4 4" />
+            </svg>
+            <button class="bp-pin active" type="button" data-bp="asa" style="left:82%; top:56%;"
+              aria-label="ASA 3.0 Stereo Camera">01</button>
+            <button class="bp-pin" type="button" data-bp="dnga" style="left:50%; top:66%;"
+              aria-label="DNGA Chassis">02</button>
+            <button class="bp-pin" type="button" data-bp="dcvt" style="left:31%; top:67%;"
+              aria-label="D-CVT Split Gear">03</button>
+            <button class="bp-pin" type="button" data-bp="srs" style="left:49%; top:39%;"
+              aria-label="6 SRS Airbags">04</button>
+          </div>
+
+          <div class="safety-detail">
+            <div id="bp-code" class="section-kicker">01 · Stereo Vision</div>
+            <h3 id="bp-title" class="bp-title">ASA 3.0 Pre-Collision Braking</h3>
+            <p id="bp-desc" class="bp-desc">Detects vehicles, pedestrians, and cyclists up to 120 km/h with automatic
+              emergency braking.</p>
+            <div class="bp-tabs" role="tablist" aria-label="Safety modules">
+              <button class="bp-tab active" type="button" data-bp="asa">01 ASA 3.0</button>
+              <button class="bp-tab" type="button" data-bp="dnga">02 DNGA</button>
+              <button class="bp-tab" type="button" data-bp="dcvt">03 D-CVT</button>
+              <button class="bp-tab" type="button" data-bp="srs">04 6 Airbags</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="compare" class="engineering-band">
+      <div class="wrap engineering-split">
+        <div class="compare-panel reveal-slow">
+          <div class="section-kicker kicker-light">Spec Comparison</div>
+          <h2 class="section-title title-light">Compare Models</h2>
+
+          <div class="compare-selectors">
+            <label>
+              <span>Model A</span>
+              <select id="compare-a" aria-label="Select first model">
+                <option value="myvi-av" selected>Myvi 1.5 AV</option>
+                <option value="ativa-av">Ativa 1.0T AV</option>
+                <option value="bezza-av">Bezza 1.3 AV</option>
+                <option value="alza-av">Alza 1.5 AV</option>
+                <option value="aruz-av">Aruz 1.5 AV</option>
+                <option value="axia-av">Axia 1.0 AV</option>
+                <option value="myvi-sport">Myvi S-Edition</option>
+                <option value="axia-se">Axia SE 1.0</option>
+              </select>
+            </label>
+            <label>
+              <span>Model B</span>
+              <select id="compare-b" aria-label="Select second model">
+                <option value="myvi-av">Myvi 1.5 AV</option>
+                <option value="ativa-av" selected>Ativa 1.0T AV</option>
+                <option value="bezza-av">Bezza 1.3 AV</option>
+                <option value="alza-av">Alza 1.5 AV</option>
+                <option value="aruz-av">Aruz 1.5 AV</option>
+                <option value="axia-av">Axia 1.0 AV</option>
+                <option value="myvi-sport">Myvi S-Edition</option>
+                <option value="axia-se">Axia SE 1.0</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="compare-preview-thumbs">
+            <div class="compare-thumb-box">
+              <img id="cmp-img-a" src="perodua-1.jpg" alt="Model A preview" referrerpolicy="no-referrer" />
+              <div id="cmp-title-a" class="cmp-thumb-name">Myvi 1.5 AV</div>
+            </div>
+            <div class="compare-thumb-box">
+              <img id="cmp-img-b" src="perodua-3.jpg" alt="Model B preview" referrerpolicy="no-referrer" />
+              <div id="cmp-title-b" class="cmp-thumb-name">Ativa 1.0T AV</div>
+            </div>
+          </div>
+
+          <div id="compare-table" class="compare-table" aria-live="polite"></div>
+        </div>
+
+        <div id="loan-studio" class="loan-panel reveal-slow">
+          <div class="section-kicker">Monthly Plan</div>
+          <h2 class="section-title loan-heading">Loan Calculator</h2>
+
+          <div class="loan-form">
+            <label>
+              <span>Model</span>
+              <select id="loan-car-select" aria-label="Select financing model">
+                <option value="myvi-av" selected>Myvi 1.5 AV — RM 59,900</option>
+                <option value="ativa-av">Ativa 1.0T AV — RM 72,600</option>
+                <option value="bezza-av">Bezza 1.3 AV — RM 49,980</option>
+                <option value="alza-av">Alza 1.5 AV — RM 75,500</option>
+                <option value="aruz-av">Aruz 1.5 AV — RM 77,900</option>
+                <option value="axia-av">Axia 1.0 AV — RM 49,500</option>
+                <option value="myvi-sport">Myvi S-Edition — RM 62,400</option>
+                <option value="axia-se">Axia SE 1.0 — RM 44,000</option>
+              </select>
+            </label>
+
+            <div class="range-control">
+              <div class="range-top">
+                <span>Downpayment</span>
+                <strong id="loan-dp-display">10% (RM 5,990)</strong>
+              </div>
+              <input id="loan-dp-range" type="range" min="0" max="35" step="5" value="10"
+                aria-label="Downpayment percentage" />
+            </div>
+
+            <div class="tenure-row">
+              <span>Tenure</span>
+              <div class="tenure-btns" role="group" aria-label="Loan years">
+                <button class="tenure-btn" type="button" data-years="5">5Y</button>
+                <button class="tenure-btn" type="button" data-years="7">7Y</button>
+                <button class="tenure-btn active" type="button" data-years="9">9Y</button>
+              </div>
+            </div>
+
+            <div class="loan-two-col">
+              <label>
+                <span>Rate (% p.a.)</span>
+                <select id="loan-rate-select" aria-label="Interest rate">
+                  <option value="2.6">2.60%</option>
+                  <option value="2.85" selected>2.85%</option>
+                  <option value="3.15">3.15%</option>
+                </select>
+              </label>
+              <label>
+                <span>Trade-In (RM)</span>
+                <input id="loan-trade-input" type="number" min="0" max="45000" step="1000" value="0"
+                  aria-label="Trade-in value" />
+              </label>
+            </div>
+          </div>
+
+          <div class="loan-result-card">
+            <div class="lr-main">
+              <span class="lr-label">Monthly</span>
+              <strong id="loan-monthly-val" class="lr-amount">RM 627 / mo</strong>
+            </div>
+            <div class="lr-breakdown">
+              <div><span>Loan Amount</span><strong id="loan-principal-val">RM 53,910</strong></div>
+              <div><span>Duration</span><strong id="loan-years-val">108 months</strong></div>
+            </div>
+          </div>
+
+          <button id="loan-reserve-btn" class="btn-primary loan-cta" type="button">
+            Reserve With Plan
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="showroom" class="showroom-section">
+      <div class="wrap showroom-split reveal-slow">
+        <div class="showroom-info">
+          <div class="section-kicker">Test Drive</div>
+          <h2 class="section-title">Visit Perodua Showroom</h2>
+          <div class="showroom-pillars">
+            <div class="pillar-item">
+              <span class="pillar-lbl">3S Center</span>
+              <strong>Perodua Sentral · 09:00 – 20:00</strong>
+            </div>
+            <div class="pillar-item">
+              <span class="pillar-lbl">Sales Line</span>
+              <strong>+60 3-5550 8820</strong>
+            </div>
+            <div class="pillar-item">
+              <span class="pillar-lbl">Delivery</span>
+              <strong>72-Hour Nationwide Carrier</strong>
+            </div>
+          </div>
+        </div>
+
+        <form id="testdrive-form" class="testdrive-form">
+          <div class="form-row">
+            <label>
+              <span>Name</span>
+              <input id="td-name" type="text" placeholder="Amirul Hakim" required />
+            </label>
+            <label>
+              <span>Phone</span>
+              <input id="td-phone" type="tel" placeholder="+60 12-345 6789" required />
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              <span>Perodua Model</span>
+              <select id="td-model">
+                <option value="Myvi 1.5 AV">Myvi 1.5 AV</option>
+                <option value="Ativa 1.0T AV">Ativa 1.0T AV</option>
+                <option value="Bezza 1.3 AV">Bezza 1.3 AV</option>
+                <option value="Alza 1.5 AV">Alza 1.5 AV</option>
+                <option value="Aruz 1.5 AV">Aruz 1.5 AV</option>
+                <option value="Axia 1.0 AV">Axia 1.0 AV</option>
+                <option value="Myvi S-Edition">Myvi S-Edition</option>
+                <option value="Axia SE 1.0">Axia SE 1.0</option>
+              </select>
+            </label>
+            <label>
+              <span>Date</span>
+              <input id="td-date" type="date" />
+            </label>
+          </div>
+          <button class="btn-primary" type="submit">Book Test Drive</button>
+          <div id="td-feedback" class="form-feedback" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <strong>PERODUA</strong>
+        <span>2026 Official Digital Showroom</span>
+      </div>
+      <div class="footer-links">
+        <a href="#hero">Top</a>
+        <a href="#models">Models</a>
+        <a href="#studio">Live Studio</a>
+        <a href="#safety">Safety</a>
+        <a href="#compare">Compare</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="spec-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-labelledby="sm-title">
+    <div class="modal-panel">
+      <button id="sm-close" class="modal-close" type="button" aria-label="Close specifications">×</button>
+      <div class="sm-grid">
+        <div class="sm-media">
+          <img id="sm-img" src="perodua-1.jpg" alt="Perodua detail" referrerpolicy="no-referrer" />
+        </div>
+        <div class="sm-body">
+          <div id="sm-kicker" class="sm-kicker">PERODUA</div>
+          <h3 id="sm-title" class="sm-title">Myvi 1.5 AV</h3>
+          <p id="sm-desc" class="sm-desc"></p>
+
+          <div class="sm-spec-table">
+            <div><span>Engine</span><strong id="sm-engine">1.5L Dual VVT-i</strong></div>
+            <div><span>Output</span><strong id="sm-power">102 HP · 137 Nm</strong></div>
+            <div><span>Gearbox</span><strong id="sm-trans">D-CVT</strong></div>
+            <div><span>Economy</span><strong id="sm-eco">21.1 km/L</strong></div>
+            <div><span>Space</span><strong id="sm-space">277 L · 160 mm</strong></div>
+            <div><span>Safety</span><strong id="sm-safety">ASA 3.0</strong></div>
+          </div>
+
+          <div class="sm-color-section">
+            <span class="sm-color-lbl">Paint: <strong id="sm-color-name">Electric Blue</strong></span>
+            <div id="sm-swatch-row" class="swatch-dots"></div>
+          </div>
+
+          <div class="sm-price-bar">
+            <strong id="sm-price" class="sm-price">RM 59,900</strong>
+            <div class="sm-actions">
+              <button id="sm-loan-btn" class="btn-card-sec" type="button">Loan</button>
+              <button id="sm-reserve-btn" class="btn-primary" type="button">Reserve</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <aside id="order-drawer" class="order-drawer" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-label="Booking drawer">
+    <div class="drawer-header">
+      <h3 class="drawer-title">Booking List</h3>
+      <button id="drawer-close" class="drawer-close" type="button" aria-label="Close booking drawer">×</button>
+    </div>
+
+    <div id="drawer-items" class="drawer-items"></div>
+
+    <div class="drawer-footer">
+      <div class="drawer-summary">
+        <div class="ds-row"><span>Vehicles</span><strong id="drawer-count-val">0</strong></div>
+        <div class="ds-row"><span>Total</span><strong id="drawer-total-val">RM 0</strong></div>
+        <div class="ds-row"><span>Deposit</span><strong id="drawer-deposit-val">RM 0</strong></div>
+      </div>
+
+      <form id="drawer-checkout-form" class="drawer-form">
+        <input id="order-customer-name" type="text" placeholder="Full name" required />
+        <input id="order-customer-phone" type="tel" placeholder="Phone (+60...)" required />
+        <input id="order-customer-email" type="email" placeholder="Email" required />
+        <select id="order-payment-plan" aria-label="Payment method">
+          <option value="Bank Loan">Bank Loan</option>
+          <option value="Full Cash">Full Cash</option>
+          <option value="Islamic Flexi">Islamic Flexi</option>
+        </select>
+        <button class="btn-primary drawer-submit" type="submit">Confirm Booking</button>
+      </form>
+      <div id="drawer-feedback" class="form-feedback" aria-live="polite"></div>
+    </div>
+  </aside>
+  <div id="drawer-backdrop" class="drawer-backdrop" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
